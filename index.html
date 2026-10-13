@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#e0457b">
+  <meta name="description" content="Booking makeup dan hairdo di Make Up By. Nissa. Bisa di studio atau homeservice.">
+  <title>Make Up By. Nissa | Booking Makeup</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💄%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="wrap">
+
+    <!-- HEADER / LOGO -->
+    <header class="hero">
+
+      <h1 class="brand">
+        <span>MAKE UP BY.</span>
+        <span>NISSA</span>
+      </h1>
+
+      <!-- GAMBAR LIPSTIK -->
+      <div class="lip-hero" aria-hidden="true">
+        <svg viewBox="0 0 120 160" class="lip-svg">
+          <defs>
+            <linearGradient id="lipBody" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="50%" stop-color="#ffeef3"/>
+              <stop offset="100%" stop-color="#ffffff"/>
+            </linearGradient>
+            <linearGradient id="lipGold" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#f6d08d"/>
+              <stop offset="50%" stop-color="#fff0c9"/>
+              <stop offset="100%" stop-color="#e2a85b"/>
+            </linearGradient>
+            <linearGradient id="lipStick" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#ff4f8b"/>
+              <stop offset="100%" stop-color="#c81e59"/>
+            </linearGradient>
+          </defs>
+
+          <ellipse cx="60" cy="152" rx="30" ry="5" fill="#5a0f28" opacity=".2"/>
+
+          <rect x="34" y="88" width="52" height="62" rx="8"
+                fill="url(#lipBody)" stroke="#fff" stroke-width="2"/>
+          <rect x="30" y="80" width="60" height="12" rx="5"
+                fill="url(#lipGold)" stroke="#fff" stroke-width="1.5"/>
+          <rect x="38" y="50" width="44" height="34" rx="5"
+                fill="url(#lipGold)" stroke="#fff" stroke-width="1.5"/>
+
+          <path d="M44 52 V28 L72 6 Q76 10 76 16 V52 Z" fill="url(#lipStick)"/>
+          <path d="M50 48 V32" stroke="#fff" stroke-width="3"
+                stroke-linecap="round" opacity=".5"/>
+
+          <text x="60" y="113" text-anchor="middle"
+                font-size="8" font-weight="900" fill="#a8254f">MAKE UP</text>
+          <text x="60" y="125" text-anchor="middle"
+                font-size="6.5" font-weight="800" fill="#a8254f">BY. NISSA</text>
+
+          <path class="sparkle" d="M104 36 l3 9 9 3 -9 3 -3 9 -3 -9 -9 -3 9 -3z" fill="#ffe9a8"/>
+          <path class="sparkle s2" d="M14 62 l2.5 7 7 2.5 -7 2.5 -2.5 7 -2.5 -7 -7 -2.5 7 -2.5z" fill="#fff"/>
+          <path class="sparkle s3" d="M100 112 l2 6 6 2 -6 2 -2 6 -2 -6 -6 -2 6 -2z" fill="#fff"/>
+        </svg>
+      </div>
+
+      <p class="tag">Makeup cantik sesuai acaramu</p>
+
+      <button type="button" class="hero-info" id="btnMulaiBooking">
+        💄 Isi formulir untuk mulai booking
+        <span class="panah-form">↓</span>
+      </button>
+
+    </header>
+
+    <!-- INFO LAYANAN -->
+    <section class="card info-card" aria-label="Info layanan">
+      <h2>Info layanan</h2>
+      <ul>
+        <li><span>🧕</span><div><strong>Hijab do</strong> gratis, sudah termasuk makeup.</div></li>
+        <li><span>💇‍♀️</span><div><strong>Hairdo</strong> khusus tata rambut, tambah <b>Rp150.000</b>.</div></li>
+        <li><span>🏠</span><div><strong>Studio atau homeservice.</strong> Homeservice ada biaya transport.</div></li>
+        <li><span>💸</span><div><strong>DP minimal 50%.</strong> Jika cancel, DP hangus.</div></li>
+      </ul>
+    </section>
+
+    <!-- FORM BOOKING -->
+    <form id="bookingForm" class="card form-tersembunyi" autocomplete="on" novalidate>
+
+      <div class="form-heading">
+        <span class="form-icon">✦</span>
+        <div>
+          <h2>Format Booking</h2>
+          <p>Silakan isi format ini jika sudah DP.</p>
+        </div>
+      </div>
+
+      <!-- REKENING DP -->
+      <div class="rek">
+        <div>
+          <small>Transfer DP ke SeaBank</small>
+          <strong id="noRek">901805460750</strong>
+          <span>a.n. Chairun Nissa</span>
+        </div>
+        <button type="button" id="salinRek">Salin</button>
+      </div>
+
+      <div class="field">
+        <label for="nama">👤 Nama</label>
+        <input id="nama" name="nama" type="text" placeholder="Masukkan nama kamu" autocomplete="name" required>
+      </div>
+
+      <div class="field">
+        <label for="wa">📱 No WA</label>
+        <input id="wa" name="wa" type="tel" inputmode="tel" placeholder="08xxxxxxxxxx" autocomplete="tel" required>
+      </div>
+
+      <div class="field">
+        <label for="alamat">📍 Alamat</label>
+        <textarea id="alamat" name="alamat" rows="3" placeholder="Alamat lengkap" autocomplete="street-address" required></textarea>
+      </div>
+
+      <div class="field">
+        <label for="acara">🎀 Acara</label>
+        <input id="acara" name="acara" type="text" placeholder="Contoh: Wisuda, lamaran, pernikahan" required>
+      </div>
+
+      <div class="field">
+        <div class="row2">
+          <div>
+            <label for="tgl">📅 Hari/tgl acara</label>
+            <input id="tgl" name="tgl" type="date" required>
+          </div>
+          <div>
+            <label for="jam">⏰ Jam acara</label>
+            <input id="jam" name="jam" type="time" required>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="jumlah">👯 Jumlah di makeup</label>
+        <div class="stepper">
+          <button type="button" id="minus" aria-label="Kurangi jumlah orang">−</button>
+          <input id="jumlah" name="jumlah" type="number" min="1" step="1" value="1" inputmode="numeric" required>
+          <button type="button" id="plus" aria-label="Tambah jumlah orang">+</button>
+        </div>
+        <div class="chips" id="chips">
+          <button type="button" data-v="1">1 orang</button>
+          <button type="button" data-v="2">2 orang</button>
+          <button type="button" data-v="3">3 orang</button>
+          <button type="button" data-v="5">5 orang</button>
+        </div>
+      </div>
+
+      <fieldset class="field fieldset">
+        <legend>🧕 Hijab do atau hairdo</legend>
+        <div class="seg">
+          <label class="choice">
+            <input type="radio" name="hijab" value="Hijab do (free)" checked>
+            <span>Hijab do<br>(gratis)</span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="hijab" value="Hairdo (+Rp150.000)">
+            <span>Hairdo<br>(+Rp150.000)</span>
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset class="field fieldset">
+        <legend>🏠 Studio atau homeservice</legend>
+        <div class="seg">
+          <label class="choice">
+            <input type="radio" name="lokasi" value="Studio" checked>
+            <span>Studio</span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="lokasi" value="Homeservice (+ biaya transport)">
+            <span>Homeservice<br>(+ transport)</span>
+          </label>
+        </div>
+        <p class="transport-note hide" id="transportBox">
+          Biaya transport menyesuaikan jarak dan akan dikonfirmasi lewat WhatsApp.
+        </p>
+      </fieldset>
+
+      <fieldset class="field fieldset">
+        <legend>✨ Reguler atau premium</legend>
+        <div class="seg">
+          <label class="choice">
+            <input type="radio" name="paket" value="Reguler" checked>
+            <span>Reguler</span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="paket" value="Premium">
+            <span>Premium</span>
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset class="field fieldset">
+        <legend>💸 DP atau pelunasan</legend>
+        <div class="seg">
+          <label class="choice">
+            <input type="radio" name="bayar" value="DP minimal 50%" checked>
+            <span>DP minimal 50%</span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="bayar" value="Pelunasan">
+            <span>Pelunasan</span>
+          </label>
+        </div>
+      </fieldset>
+
+      <label class="agree">
+        <input type="checkbox" id="setuju" required>
+        <span>Saya sudah transfer DP dan paham bahwa jika cancel, <b>DP hangus</b>.</span>
+      </label>
+
+      <p class="err" id="err" role="alert" aria-live="polite"></p>
+
+      <button type="submit" class="send" id="send">
+        <span class="send-txt">Kirim booking ke WhatsApp</span>
+        <span aria-hidden="true">➜</span>
+      </button>
+
+      <pre class="preview" id="preview" hidden></pre>
+
+      <p class="privacy-note">🔒 Data booking akan diteruskan ke WhatsApp Nissa.</p>
+
+    </form>
+
+    <footer class="foot">
+      <p>© Make Up By. Nissa</p>
+      <span>Rapi · Natural · Tahan lama</span>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
